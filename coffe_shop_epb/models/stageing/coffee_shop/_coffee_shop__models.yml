@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stg_cs__customers
+  - name: stg_cs__order_items
+  - name: stg_cs__orders
+  - name: stg_cs__product_prices
+  - name: stg_cs__products
