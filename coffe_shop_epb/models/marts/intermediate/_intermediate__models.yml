@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int__web_views
+    columns:
+      - name: webview_id
+        tests:
+          - not_null
+          - unique
+      - name: visitor_id
+        tests:
+          - not_null
