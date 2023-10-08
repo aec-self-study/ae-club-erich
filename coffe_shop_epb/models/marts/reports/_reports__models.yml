@@ -3,3 +3,4 @@ version: 2
 models:
   - name: rep__new_customer_rev_weekly
   - name: rep__product_type_rev_weekly
+  - name: rep__jinja_product_amount

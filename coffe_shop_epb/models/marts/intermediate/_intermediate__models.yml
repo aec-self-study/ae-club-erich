@@ -1,6 +1,8 @@
 version: 2
 
 models:
+  - name: int__product_amount
+  - name: int__sessions
   - name: int__web_views
     columns:
       - name: webview_id

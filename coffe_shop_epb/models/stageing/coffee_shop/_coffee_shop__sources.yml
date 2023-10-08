@@ -6,7 +6,16 @@ sources:
    database: analytics-engineers-club
    tables:
    - name: customers
+     columns:
+     - name: email
+       tests:
+        - email_format
    - name: order_items
    - name: orders
    - name: products
    - name: product_prices
+     columns:
+     - name: price
+       tests:
+        - not_null
+        - greater_than_zero
