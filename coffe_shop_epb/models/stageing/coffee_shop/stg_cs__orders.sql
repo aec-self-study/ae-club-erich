@@ -1,3 +1,7 @@
+{{ config(
+  materialized = "table",
+  cluster_by = "date_time_created"
+) }}
 select
 cast(id as string) as order_id,
 created_at date_time_created,
