@@ -1,3 +1,10 @@
+{{ config(
+  materialized = "table",
+  cluster_by = "category",
+  partition_by = {"field":"date_time_created",
+  "data_type":"timestamp",
+  "granularity":"day"}
+) }}
 WITH orders AS (
    SELECT
       order_id,

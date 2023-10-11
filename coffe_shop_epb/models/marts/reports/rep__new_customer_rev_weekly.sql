@@ -1,3 +1,6 @@
+{{ config(
+  materialized = "table"
+) }}
 WITH orders AS (
     SELECT
         order_id,

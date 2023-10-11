@@ -1,0 +1,17 @@
+{% macro get_product_types() %}
+{% set product_types_query %}
+select distinct category from {{ref('int__product_amount')}} order by 1
+{% endset %}
+
+{% set results = run_query(product_types_query) %}
+
+{% if execute %}
+{# Return the first column #}
+{% set results_list = results.columns[0].values() %}
+{% else %}
+{% set results_list = [] %}
+{% endif %}
+
+{{ return(results_list) }}
+
+{% endmacro %}
