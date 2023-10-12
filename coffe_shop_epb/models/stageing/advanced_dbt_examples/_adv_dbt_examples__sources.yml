@@ -2,6 +2,12 @@ version: 2
  
 sources:
   - name: advanced_dbt_examples
+    schema: advanced_dbt_examples
     project: analytics-engineers-club
     tables:
       - name: form_events
+  - name: sheet_export
+    schema: dbt_epb
+    project: aec-students
+    tables:
+      - name: ice_cream_form_responses
