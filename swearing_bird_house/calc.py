@@ -1,15 +1,18 @@
 import argparse
 
 def aec_subtract(ints_to_sub):
+  if len(ints_to_sub) > 2:
+      raise ValueError("Too many integers to subtract")
   arg_1 = ints_to_sub[0]
   arg_2 = ints_to_sub[1]
   our_sub = arg_1 - arg_2
   if our_sub < 0:
     our_sub = 0
-  print(f"The subtracted result is  {our_sub}")
   return our_sub
 
 def aec_division(ints_to_div):
+    if len(ints_to_div) > 2:
+        raise ValueError("Too many integers to divide")
     arg_1 = ints_to_div[0]
     arg_2 = ints_to_div[1]
     our_div = arg_1 / arg_2
@@ -31,7 +34,7 @@ if __name__ == "__main__":
         print(f"the sum of values is: {our_sum}")
 
     sub = subparsers.add_parser("sub", help = "subtract integers")
-    sub.add_argument("ints_to_sub", nargs=2, type=int)
+    sub.add_argument("ints_to_sub", nargs="*", type=int)
 
     if args.command == "sub":
         our_sub = aec_subtract(args.ints_to_sub)
@@ -47,7 +50,7 @@ if __name__ == "__main__":
         print(f"the multiplication of values is: {our_mult}")
 
     div = subparsers.add_parser("div", help = "divide integers")
-    div.add_argument("ints_to_div", nargs=2, type=int)
+    div.add_argument("ints_to_div", nargs='*', type=int)
 
     if args.command == "div":
         our_div = aec_division(args.ints_to_div)
