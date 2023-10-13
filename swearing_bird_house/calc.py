@@ -12,11 +12,8 @@ def aec_subtract(ints_to_sub):
 def aec_division(ints_to_div):
     arg_1 = ints_to_div[0]
     arg_2 = ints_to_div[1]
-    if arg_2 == 0:
-        raise ValueError("Nn, No division by zero! Bad user!")
-    else:
-        our_div = arg_1 / arg_2
-        return our_div
+    our_div = arg_1 / arg_2
+    return our_div
 
 
 parser = argparse.ArgumentParser(description = "CLI Calculator.")
